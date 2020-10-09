@@ -1,3 +1,4 @@
+package Buoi1;
 public class WhatName {
     public static String Split_Name(String s) {
         s = s.trim();

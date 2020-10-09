@@ -1,3 +1,5 @@
+package Buoi1;
+
 import java.util.Scanner;
 public class Lession_Eight {
     public static Scanner sc = new Scanner(System.in);

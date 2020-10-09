@@ -1,3 +1,5 @@
+package Buoi1;
+
 public class Ptbac2 {
     public static double ptb1(double a, double b) {
         try {
