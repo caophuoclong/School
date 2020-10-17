@@ -12,7 +12,7 @@ void hienthi(List L){
 	for(int i = 0 ;i < L.Last;i++){
 		printf("%d ",L.Elements[i]);
 	}
-	printf("\=n";)
+	printf("\n";)
 }
 void sort(List *L){
 	for(int i = 0 ;i < L->Last;i++)
