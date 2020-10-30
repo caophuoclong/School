@@ -1,5 +1,7 @@
 package Buoi2;
 
+import Buoi3.Date;
+
 public class SDDate {
     public static void main(String[] args) {
         Date d1 = new Date(15,6,2000);
