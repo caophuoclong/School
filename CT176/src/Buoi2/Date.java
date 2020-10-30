@@ -30,6 +30,8 @@ public class Date {
     }
     public void Nhap(){
         int []date = {0,31,28,31,30,31,30,31,31,30,31,30,31};
+        @SuppressWarnings("resource")
+
         Scanner sc = new Scanner(System.in);
         do {
             System.out.print("Nhap nam: ");

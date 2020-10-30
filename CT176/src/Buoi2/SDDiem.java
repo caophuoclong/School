@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class SDDiem {
     public static void main(String[] args) {
+        @SuppressWarnings("resource")
+
     	Scanner sc = new Scanner(System.in);
         Diem a = new Diem(3,4);
         Diem b = new Diem();

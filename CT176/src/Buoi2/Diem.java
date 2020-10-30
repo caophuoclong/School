@@ -15,7 +15,8 @@ public class Diem {
         y = dy;
     }
     public  void Nhap(){
-        Scanner  sc = new Scanner(System.in);
+        @SuppressWarnings("resource")
+		Scanner  sc = new Scanner(System.in);
         int dx = sc.nextInt();
         int dy = sc.nextInt();
         y = dy;
