@@ -2,15 +2,14 @@ package Buoi3;
 
 import java.util.Scanner;
 
-public class Gach {
+public class Gach  {
 	private String id;
 	private String color;
 	private int item_in_Box;
 	private int long_item;
 	private int width_item;
-	private long price;
+	private int price;
 	private Date ngaySX;
-	
 	public Gach(){
 		id = "001";
 		color = "black";
@@ -31,7 +30,7 @@ public class Gach {
 		
 		
 	}
-	public Gach(String id1, String color1, int quanity, int long_item1,int width_item1, long price1, Date x){
+	public Gach(String id1, String color1, int quanity, int long_item1,int width_item1, int price1, Date x){
 		this.id = id1;
 		this.color = color1;
 		this.item_in_Box = quanity;
@@ -43,7 +42,7 @@ public class Gach {
 	public void nhap() {
 		System.out.print("Nhap ma so: ");
 		Scanner sc = new Scanner(System.in);
-		this.id	= sc.nextLine();
+		this.id = sc.nextLine();
 		System.out.print("Nhap mau sac: ");
 		this.color = sc.nextLine();
 		System.out.print("Nhap so luong: ");
@@ -53,15 +52,15 @@ public class Gach {
 		System.out.print("Nhap chieu rong cua vien gach: ");
 		this.width_item = sc.nextInt();
 		System.out.print("Nhap gia cua hop gach: ");
-		this.price = sc.nextLong();
-		System.out.print("Nhap ngay san xuat: ");
+		this.price = sc.nextInt();
+		System.out.print("Nhap ngay san xuat:\n ");
 		this.ngaySX.Nhap();
 		
 	}
 	public void in() {
 		System.out.print("ID: "+this.id +"\nMau sac: " + this.color + "\nSo luong: " + this.item_in_Box + "\n"
 				+ "Chieu dai: "+this.long_item+"\nChieu rong: "+this.width_item + "\nGia: "+this.price +"VND\n"
-						+ "Ngay san xuat: "+this.ngaySX);
+						+ "Ngay san xuat: "+this.ngaySX.logDay()+"/"+this.ngaySX.logMonth()+"/"+this.ngaySX.logYear());
 		
 	}
 	public float giaBanLe() {
@@ -76,6 +75,13 @@ public class Gach {
 	public int soLuongHop(int D, int N) {
 		return (D*N) / MaxDientichNen();
 	}
+	public int Giathanh(int D, int N) {
+		return (D*N) * this.price / MaxDientichNen();
+	}
+	public int getPrice(){
+		return this.price;
+	} 
+	
 	
 	
 	
