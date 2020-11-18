@@ -15,6 +15,11 @@ public class Date {
         mm = 1;
         yy = 2020;
     }
+    public Date(Date d){
+    	this.dd = d.dd;
+    	this.mm = d.mm;
+    	this.yy = d.yy;
+    }
     public void Show(){
         System.out.println(dd+"/"+mm+"/"+yy);
     }
@@ -101,6 +106,9 @@ public class Date {
     }
     public int logYear(){
         return yy;
+    }
+    public String toString(){
+    	return this.dd + "/" + this.mm + "/" + this.yy;
     }
 
 }

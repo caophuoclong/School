@@ -1,7 +1,7 @@
 package Buoi3;
 
 import java.util.Scanner;
-
+import Buoi2.Date;
 public class Gach  {
 	private String id;
 	private String color;
@@ -41,6 +41,7 @@ public class Gach  {
 	}
 	public void nhap() {
 		System.out.print("Nhap ma so: ");
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		this.id = sc.nextLine();
 		System.out.print("Nhap mau sac: ");

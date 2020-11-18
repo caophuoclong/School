@@ -1,6 +1,5 @@
 package Buoi2;
 
-import Buoi3.Date;
 
 public class SDDate {
     public static void main(String[] args) {

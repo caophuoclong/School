@@ -4,7 +4,8 @@ public class SDGach {
     
     public static void main(String []args){
         int n;
-        Scanner sc = new Scanner(System.in);
+        @SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
         System.out.print("Nhap so luong hop gach: ");
         n = sc.nextInt();
         Gach g[] = new Gach[n];
@@ -36,7 +37,7 @@ public class SDGach {
         System.out.print("\n\nBest choice \n\n");
         best.in();
         int best_price = best.Giathanh(5, 20);
-        System.out.print("Gia thanh: " + best_price);
+        System.out.print("\n\nGia thanh: " + best_price);
 
 
     }

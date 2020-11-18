@@ -6,6 +6,10 @@ public class Diem {
     private int x;
 	private int y;
 
+	public Diem(Diem d){
+		this.x = d.x;
+		this.y = d.y;
+	}
     public Diem(){
         x = 0;
         y = 0;
@@ -17,7 +21,9 @@ public class Diem {
     public  void Nhap(){
         @SuppressWarnings("resource")
 		Scanner  sc = new Scanner(System.in);
+        System.out.print("Nhap x: ");
         int dx = sc.nextInt();
+        System.out.print("Nhap y: ");
         int dy = sc.nextInt();
         y = dy;
         x = dx;
@@ -47,6 +53,9 @@ public class Diem {
     	b.x = -this.x;
     	b.y = -this.y;
     	return b;
+    }
+    public String toString(){
+    	return "("+this.x+","+this.y+")";
     }
     
 	
