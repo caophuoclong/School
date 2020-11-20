@@ -11,7 +11,7 @@ public class SinhVien {
 		this.id = "B1906709";
 		this.name = "Tran Cao Phuoc Long";
 		this.nsinh = new Date(26,03,2001);
-		this.soluongHP = 1;
+		this.soluongHP = 0;
 		this.tenHP = new String[soluongHP];
 		this.diemHP = new String[soluongHP];
 	}
@@ -62,16 +62,20 @@ public class SinhVien {
 		}
 
 	}
+	public void Nhap() {
+	}
 	public String toString(){
 		String x = "ID: " + this.id + "\nName: " + this.name + "\nNgay sinh: " + this.nsinh.toString();
-		String y = "\nCac hoc phan da dang ky: ";
+		String y = "Cac hoc phan da dang ky: ";
 		for(int i = 0 ; i < this.soluongHP ; i++){
 			y += "\n" + (i+1) + ". " + tenHP[i] + "-" + diemHP[i];
 		}
+		y += "\n";
+		x += "\n";
 		if (this.soluongHP == 0)
-			return x;
+			return x ;
 		else
-			return x + y;
+			return x + y ;
 	}
 	public float getPoint(String a){
 		String s = a;
@@ -129,6 +133,10 @@ public class SinhVien {
 		}
 		return (float) (diem/soluongHP);
 		
+	}
+	public String getEmail(){
+		String s = "Long";
+		return s;
 	}
 	public void add_newHP(){
 		Scanner sc = new Scanner(System.in);
