@@ -18,15 +18,17 @@ public class SDSVCNTT {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
         int chose = -1;
+        sc.nextLine();
         svcntt = new SinhVien[n];
         for (int i = 0; i < n;i++){
-        	System.out.print("Nhap lua chon: ");
+        	System.out.print("Nhap lua chon: (SV = 0 , SVCNTT = 1) ");
         	do{
         		try{
         			String s = sc.nextLine();
         			chose = Integer.parseInt(s);
         		}
         		catch(Exception e){
+        			System.out.print("Nhap lai: ");
         			chose = Integer.MAX_VALUE;
         		}
         		
@@ -36,7 +38,7 @@ public class SDSVCNTT {
         	System.out.print("Lua chon: "+chose +"\n");
         	if(chose == 1){
         		svcntt[i] = new SinhvienCNTT();
-        		//svcntt[i].Nhap();
+        		svcntt[i].Nhap();
         		
         		
         		count++;

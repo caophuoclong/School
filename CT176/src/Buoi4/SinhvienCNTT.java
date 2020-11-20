@@ -40,4 +40,5 @@ public class SinhvienCNTT extends SinhVien {
     public String getEmail(){
         return this.email;
     }
+    
 }
