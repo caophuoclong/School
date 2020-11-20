@@ -30,7 +30,7 @@ public class SinhvienCNTT extends SinhVien {
         super.nhapDiem();
     }
     public String toString(){
-        String s = super.toString() + "\nEmail: " + this.email + "\nTai khoan: " + this.tk + "\nMat khau: " + this.mk;
+        String s = super.toString() + "Email: " + this.email + "\nTai khoan: " + this.tk + "\nMat khau: " + this.mk +"\n";
         return s;
     }
     public void changePass(String newPass){
