@@ -1,5 +1,7 @@
 package Buoi3;
 import java.util.Scanner;
+import java.lang.*;
+
 import Buoi2.Date;
 public class SinhVien {
 	private String id, name;
@@ -37,6 +39,7 @@ public class SinhVien {
 		this.id = sc.nextLine();
 		System.out.print("\nNhap ten: ");
 		this.name = sc.nextLine();
+		this.name = toUpper(this.name);
 		this.nsinh.Nhap();
 		System.out.print("\nNhap so luong hoc phan: ");
 		this.soluongHP = sc.nextInt();
@@ -50,7 +53,6 @@ public class SinhVien {
 			//System.out.print("\n");
 		}
 
-	
 	}
 	public void nhapDiem(){
 		Scanner sc = new Scanner(System.in);
@@ -128,7 +130,6 @@ public class SinhVien {
 		float diem = 0;
 		for(int i = 0 ; i  < soluongHP;i++){
 			String s = diemHP[i].trim();
-			System.out.print("\n"+s);
 			diem += getPoint((String)s);
 		}
 		return (float) (diem/soluongHP);
@@ -153,10 +154,24 @@ public class SinhVien {
 		return this.soluongHP;
 	}
 	public String log_name(){
-		return this.name;
+		String [] x = this.name.trim().split(" ");
+		String a = x[x.length-1];
+		return a;
 	}
 	public void xoa_HP(){
 		this.soluongHP--;
+	}
+	public void changePass(String agrs){
+		
+	}
+	public String toUpper(String s){
+		String []arr_name = s.trim().split(" ");
+		String name = "";
+		for (String i : arr_name){
+			i = i.substring(0,1).toUpperCase() + i.substring(1).toLowerCase();
+			name += i + " " ;
+		}
+		return name;
 	}
 	
 	

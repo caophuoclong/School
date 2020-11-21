@@ -4,7 +4,6 @@ public class SDGach {
     
     public static void main(String []args){
         int n;
-        @SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
         System.out.print("Nhap so luong hop gach: ");
         n = sc.nextInt();

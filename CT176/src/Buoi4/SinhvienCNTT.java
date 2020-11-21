@@ -28,6 +28,7 @@ public class SinhvienCNTT extends SinhVien {
         System.out.print("Nhap mat khau: ");
         this.mk = sc.nextLine();
         super.nhapDiem();
+        
     }
     public String toString(){
         String s = super.toString() + "Email: " + this.email + "\nTai khoan: " + this.tk + "\nMat khau: " + this.mk +"\n";

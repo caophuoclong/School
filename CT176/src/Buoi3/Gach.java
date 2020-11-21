@@ -41,7 +41,6 @@ public class Gach  {
 	}
 	public void nhap() {
 		System.out.print("Nhap ma so: ");
-		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		this.id = sc.nextLine();
 		System.out.print("Nhap mau sac: ");

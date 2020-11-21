@@ -13,7 +13,6 @@ public class PhanSo {
         mau = y;
     }
     public void Nhap(){
-        @SuppressWarnings("resource")
 
     	Scanner sc = new Scanner(System.in);
         System.out.print("Nhap tu so: ");

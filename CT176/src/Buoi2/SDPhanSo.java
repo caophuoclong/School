@@ -28,7 +28,6 @@ public class SDPhanSo {
        
         int n;
         PhanSo ary[];
-        @SuppressWarnings("resource")
 
         Scanner  sc = new Scanner(System.in);
         System.out.print("Nhap so phan tu: \n");

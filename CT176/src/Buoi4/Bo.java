@@ -5,3 +5,4 @@ public class Bo extends ConVat {
       System.out.print("Bo`....Bo`....");
     }
 }
+

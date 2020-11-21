@@ -2,7 +2,8 @@ package Buoi4;
 
 import java.util.Scanner;
 
-abstract class  ConVat {
+
+public abstract class  ConVat {
     private String giong, maulong;
     private float cannag;
     public ConVat(){
@@ -28,7 +29,7 @@ abstract class  ConVat {
 
     }
     public void HienThi(){
-        System.out.print("Giong: "+ this.giong + "\nMau long: "+this.maulong+"\nCan nang: "+this.cannag+"\n");
+        System.out.print("\nGiong: "+ this.giong + "\nMau long: "+this.maulong+"\nCan nang: "+this.cannag+"KG\n");
     }
     abstract void keu();
 }

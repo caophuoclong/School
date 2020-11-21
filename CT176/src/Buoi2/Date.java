@@ -35,7 +35,6 @@ public class Date {
     }
     public void Nhap(){
         int []date = {0,31,28,31,30,31,30,31,31,30,31,30,31};
-        @SuppressWarnings("resource")
 
         Scanner sc = new Scanner(System.in);
         do {
@@ -108,7 +107,7 @@ public class Date {
         return yy;
     }
     public String toString(){
-    	return this.dd + "/" + this.mm + "/" + this.yy;
+    	return this.dd + "/" + this.mm + "/" + this.yy +"\n";
     }
 
 }

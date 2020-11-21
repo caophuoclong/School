@@ -3,11 +3,14 @@ import java.util.Scanner;
 
 import Buoi3.SinhVien;
 public class SDSVCNTT {
-    public static String  compareEmail(String email, SinhVien sv){
+    public static boolean  compareEmail(String email, SinhVien sv){
         if (email.equals(sv.getEmail()))
-            return sv.getEmail();
+               	
+        
+            return true;
         else
-            return "Ngan";
+        	
+            return false;
     }
     public static void main(String[] args) {
         SinhVien []svcntt;
@@ -62,11 +65,19 @@ public class SDSVCNTT {
         
         	
         }
+        //System.out.print(svcntt[0].log_name());
+        String infor;
         System.out.print("Nhap email can tim: ");
         String email = sc.nextLine();
-        for (int i = 0;i < count; i++){
+        if (email != "None")
         	
-        	System.out.print(compareEmail(email,svcntt[i]));
+        for (int i = 0;i < count; i++){
+        	if (compareEmail(email,svcntt[i]))
+        		infor = svcntt[i].toString() +"Diem trung binh: " + Float.toString(svcntt[i].dtb()) ;
+        	else
+        		infor = "N";
+        	if (infor != "N")
+        		System.out.print(infor);
 
         	
         }
