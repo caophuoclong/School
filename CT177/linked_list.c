@@ -41,13 +41,19 @@ Position locate(ElementType x, List L){
   }
   return p;
 }
-void addFirst(ElementType x, List *L);
+void addFirst(ElementType x, List *L){
+  Position p;
+  p->Element = x;
+  p->Next = NULL;
+  p->Next = (*L) ->Next;
+  (*L) ->Next = p;
+}
 List intersectionSet(List L1, List L2){
   List L3;
   makenullList(&L3);
   while(L1->Next  != NULL){
     if(member(L1->Next->Element,L2)){
-      append(L1->Next->Element,L3);
+      append(L1->Next->Element,&L3);
     }
     L1 = L1->Next;
   }
