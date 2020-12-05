@@ -1,6 +1,21 @@
 package Test;
+import java.util.Scanner;
 import java.lang.*;
 public class Test {
+	public static void Ham1(int x){
+		Scanner sc = new Scanner(System.in);
+		x = sc.nextInt();
+		System.out.print(x);
+	}
+	public static int	 Ham4(long a){
+		return ((int)a + 10001);
+	}
+	public static void Ham2(float y){
+		float z = 15;
+		z += y;
+		System.out.print(z);
+		//return y;
+	}
 	public static String toUpper(String s){
 		String []arr_name = s.trim().split(" ");
 		String name = "";
@@ -11,12 +26,7 @@ public class Test {
 		return name;
 	}
 	public static void main(String []args){
-		String s;
-		s = "Tran cao phuoc long";
-		String [] x = s.trim().split(" ");
-		String a = x[x.length-1];
-		s = toUpper(s);
-		System.out.print(s);
+		Ham2(11);
 	}
 
 }
