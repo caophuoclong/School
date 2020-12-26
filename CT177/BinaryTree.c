@@ -2,9 +2,7 @@
 #include <math.h>
 #include <stdlib.h>
 struct Node{
-
       int Key;
-
       struct Node *Left, *Right;
 
 };
@@ -199,6 +197,30 @@ Tree getParent(int x, Tree T){
 		if(x > T->Key) return getParent(x,T->Right);
 		else return getParent(x,T->Left);
 	}
+}
+void printPath(int x, Tree T){
+    if(T != NULL){
+        if(x > T->Key){
+            printf("%d ",T->Key);
+            printPath(x,T->Right);
+        }
+        else if(x < T->Key){
+            printf("%d ",T->Key);
+            printPath(x,T->Left);
+
+        }
+        if(T->Key == x){
+            printf("%d ", T->Key);
+            printf("-> Tim thay");
+
+        }
+
+    }
+    else
+        printf("-> Khong thay");
+
+   
+
 }
 
 
