@@ -1,5 +1,5 @@
-#include "list.c"
-
+//#include "list.c"
+#include <stdio.h>
 typedef struct{
 	int data[100];
 	int size;

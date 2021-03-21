@@ -22,9 +22,4 @@ return L->data[i-1];
 int count_list(List* L) {
 return L->size;
 }
-void print_list(List L){
-	int i;
-	for (i = 0;i < L.size;i++)
-		printf("%d ",L.data[i]);
-		
-}
+
