@@ -1,6 +1,8 @@
 insert into khuvuc values('130.120.80','Brin RDC',null);
 insert into khuvuc values('130.120.81','Brin tang 1',null);
-insert into khuvuc values('130.120.83','Brin tang 2',null);
+insert into khuvuc values('130.120.82','Brin tang 2',null);
+
+insert into khuvuc values('130.120.83','Brin tang 3',null);
 
 ----------------------------------------------------
 
@@ -37,6 +39,7 @@ insert into may values('p10','Poste 10','130.120.81',03,'UNIX','s12');
 insert into may values('p11','Poste 11','130.120.82',01,'PCNT','s21');
 insert into may values('p12','Poste 12','130.120.82',02,'PCWS','s21');
 -----------------------------------------------------
+
 insert into phanmem values('log1','Oracle 6','05-13-1995','6.2','UNIX',3000);
 insert into phanmem values('log2','Oracle 8','09-15-1999','8i','UNIX',5600);
 insert into phanmem values('log3','SQL Server','04-12-1998','7','PCNT',2700);
@@ -44,7 +47,7 @@ insert into phanmem values('log4','Front Page','06-03-1997','5','PCWS',500);
 insert into phanmem values('log5','WinDev','05-12-1997','5','PCWS',750);
 insert into phanmem values('log6','SQL*Net',null,'2.0','UNIX',500);
 insert into phanmem values('log7','I.I.S.','04-12-2002','2','PCNT',810);
-insert into phanmem values('log8','Dreamweaver','09-21-2003','2.0','BeOS',1400);
+insert into phanmem values('log8','Dreamweaver','09-21-2003','2.0','PCNT',1400);
 
 
 -----------------------------------------------------
