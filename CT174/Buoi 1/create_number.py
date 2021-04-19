@@ -1,5 +1,5 @@
 import random
-import os
+import os 
 L = []
 n = 105
 os.remove("test.inp")
