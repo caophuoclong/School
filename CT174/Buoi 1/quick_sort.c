@@ -1,7 +1,7 @@
 #include "find_pivot.c"
 #include "partition.c"
 
-void quick_sort(int arr[], int i, int j){
+void quick_sort(int  arr[], int i, int j){
     int pvi, k;
     int pv;
     pvi = find_pivot(arr,i,j);
