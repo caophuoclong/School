@@ -1,11 +1,11 @@
 import random
 import os 
 L = []
-n = 105
+n = 10
 os.remove("test.inp")
 for i in range(n):
-    L.append(random.randint(0,34000))
-set_number = set(L)
+    L.append(random.randint(0,20))
+set_number = L
 print(set_number)
 
 with open("test.inp", "a") as wf:

@@ -5,7 +5,7 @@ int find_pivot(int arr[], int i, int j){
         k++;
     if(k > j) return -1;
     else
-        if(arr[k] > first_key)
+        if(arr[k] < first_key)
             return k;
         else
             return i;

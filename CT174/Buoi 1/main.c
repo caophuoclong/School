@@ -10,7 +10,7 @@ int main(){
     clock_t start, end;
     clock_t start1, end1;
     int arr[100];
-    freopen("test.inp", "r", stdin);
+    freopen("dayso.inp", "r", stdin);
     int n;
     scanf("%d",&n);
 
@@ -22,11 +22,11 @@ int main(){
     quick_sort(arr,0,n-1);
     end = clock();
     start1 = clock();
-    intersection_sort(arr,n);
+    //intersection_sort(arr,n);
     end1 = clock();
     print(arr,n);
-    printf("%lf\n", (double) start - end);
-    printf("%lf", (double) start1 - end1);
+    //printf("%lf\n", (double) start - end);
+    //printf("%lf", (double) start1 - end1);
 
     
     return 0;
