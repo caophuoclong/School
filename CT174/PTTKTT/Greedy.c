@@ -33,7 +33,7 @@ void swap(DoVat *x, DoVat *y){
 
 void bubbleSort(DoVat *dsdv, int n){
 	for(int i = 0; i < n-2;i++){
-		for(int j = n-1; j >= i;j--)
+		for(int j = n-1; j >= i+1;j--)
 			if(dsdv[j].DG > dsdv[j-1].DG)
 				swap(&dsdv[j],&dsdv[j-1]);
 	}
@@ -41,6 +41,12 @@ void bubbleSort(DoVat *dsdv, int n){
 void print(DoVat *dsdv, int n, float w){
 	for(int i = 0; i < n; i++){
 		printf("%20s-%3f-%3f-%3f-%3d\n",dsdv[i].TenDV,dsdv[i].TL,dsdv[i].GT,dsdv[i].DG,dsdv[i].PA);
+	}
+}
+void Greedy(DoVat *dsdv, int n, float w){
+	for(int i = 0; i < n;i++){
+		dsdv[i].PA = w/dsdv[i].TL;
+		w = w - dsdv[i].PA * dsdv[i].TL;
 	}
 }
 
@@ -52,7 +58,9 @@ int main(){
 	print(dsdv,n,w);
 	bubbleSort(dsdv,n);
 	printf("Mang sau khi sap xep:\n");
+	Greedy(dsdv,n,w);
 	print(dsdv,n,w);
+
 	free(dsdv);
 	return 0;
 }
