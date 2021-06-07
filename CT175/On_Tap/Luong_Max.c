@@ -26,9 +26,9 @@ int empty_queue(Queue *Q){
 	return Q->front > Q->rear;
 }
 typedef struct{
-	int dir; // >0: +; <0 -; = 0 chua co nhan;
-	int pre; // dinh truoc
-	int sigma; // luong tang luong;
+	int dir = 0; // >0: +; <0 -; = 0 chua co nhan;
+	int pre = -1; // dinh truoc
+	int sigma = 0; // luong tang luong;
 }Label;
 typedef struct{
 	ElementType	C[100][100];
@@ -118,7 +118,19 @@ int FordFullkerson(Grap *G, int s, int t){
 		make_null_queue(&Q);
 		push_queue(&Q,s);
 		while(!empty_queue(&Q)){
-
+			ElementType u = top_queue(&Q);
+			pop_queue(&Q);
+			List L = neighbors(G,u);
+			int index;
+			for(index = 0; index < L.size; index++){
+				int y = L.data[index];
+				if(labels[y].pre == -1){
+					lables[y].dir = 1;
+					lables[y].pre = u;
+					lables[y].sigma = G->C[u][y];
+				}
+				
+			}
 		}
 
 
