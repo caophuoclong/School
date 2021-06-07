@@ -69,7 +69,12 @@ int main(){
 	int sum_w = Kruskal(&G, &T);
 	printf ("%d\n", sum_w);
 	
-	for (e=0; e<T.m; e++)
-		printf("%d %d %d\n", T.A[e].u, T.A[e].v, T.A[e].w);
+	for (e=0; e<T.m; e++){
+		if(T.A[e].u < T.A[e].v) 
+			printf("%d %d %d\n", T.A[e].u, T.A[e].v, T.A[e].w);
+		else
+			printf("%d %d %d\n", T.A[e].v, T.A[e].u, T.A[e].w);
+
+	}
 	return 0;
 }
