@@ -1,4 +1,5 @@
 #include <stdio.h>
+typedef int ElementType;
 typedef struct{
 	ElementType data[100];
 	int front, rear;
@@ -26,9 +27,9 @@ int empty_queue(Queue *Q){
 	return Q->front > Q->rear;
 }
 typedef struct{
-	int dir = 0; // >0: +; <0 -; = 0 chua co nhan;
-	int pre = -1; // dinh truoc
-	int sigma = 0; // luong tang luong;
+	int dir; // >0: +; <0 -; = 0 chua co nhan;
+	int pre; // dinh truoc
+	int sigma; // luong tang luong;
 }Label;
 typedef struct{
 	ElementType	C[100][100];
@@ -41,7 +42,7 @@ void init_graph(Graph *G, int n){
 	G->n = n;
 	for(i =1; i <= n;i++){
 		for(j = 1; j <= n;j++){
-			G->data[i][j] = 0;
+			G->C[i][j] = 0;
 		}
 	}
 }
@@ -62,75 +63,56 @@ int deg(Graph *G, ElementType x){
 	int deg = 0;
 	int i;
 	for( i = 0; i <= G->n;i++)
-		deg += G->data[x][i];
+		deg += G->C[x][i];
 	return deg;
 }
 
 int adjacent(Graph *G, ElementType x, ElementType y){
-	return (G->data[x][y] != 0);
+	return (G->C[x][y] != 0);
 }
 
-List neighbors(Graph *G, ElementType x){
-	List L;
-	int i;
-	make_null_list(&L);
-	for( i = 1; i <= G->n;i++){
-		if(adjacent(G,x,i) && i != x){
-			push_list(&L,i);
-		}
-	}
-	return L;
-
-}
-List BFS(Graph *G, ElementType x){
-	List list;
-	make_null_list(&list);
-	Queue frontier;
-	make_null_queue(&frontier);
-	if (Mark[x] == 0)
-		push_queue(&frontier, x);
-	while(!empty_queue(&frontier)){
-		ElementType u = top_queue(&frontier);
-		pop_queue(&frontier);
-		push_list(&list, u);
-		Mark[u] = 1;
-		List L = neighbors(G,u);
-		for(int i = 0; i < L.size; i++){
-			ElementType y = L.data[i];
-			if(Mark[y] == 0)
-				push_queue(&frontier,y);
-			Mark[y] = 1;
-		}
 
 
-	}
-	return list;
-}
-int FordFullkerson(Grap *G, int s, int t){
-	int_flow(G);
+int FordFullkerson(Graph *G, int s, int t){
+	init_flow(G);
 	Queue Q;
-
+	int found = 0;
+	Label labels[G->n];
 	while(1){
-		Label labels[G->n];
-		lables[s].dir = 1;
+		int u;
+		for(u = 1; u <= G->n;u++){
+			labels[u].dir = 0;
+		}
+		labels[s].dir = 1;
 		labels[s].pre = s;
-		laebls[s].sigma = 100000;
+		labels[s].sigma = 100000;
 		make_null_queue(&Q);
 		push_queue(&Q,s);
 		while(!empty_queue(&Q)){
 			ElementType u = top_queue(&Q);
 			pop_queue(&Q);
-			List L = neighbors(G,u);
-			int index;
-			for(index = 0; index < L.size; index++){
-				int y = L.data[index];
-				if(labels[y].pre == -1){
-					lables[y].dir = 1;
-					lables[y].pre = u;
-					lables[y].sigma = G->C[u][y];
+			int v;
+			for(v = 1; v <= G->n;v++){
+				if (labels[v].dir == 0 && adjacent(G,u,v) && G->F[u][v] < G->C[u][v]){
+					labels[v].dir = 1;
+					labels[v].pre = u;
+					labels[v].sigma = G->C[u][v];
 				}
-				
+				if(labels[v].dir == 0 && adjacent(G,v,u) && G->F[v][u] > 0){
+					labels[v].dir = -1;
+					labels[v].pre = u;
+					labels[v].sigma = G->C[v][u];
+				}
 			}
+			
+
+			if(labels[t].dir != -1){
+				found = 1;
+				break;
+			}
+		}
+		if(found){
+
 		}
 
 
