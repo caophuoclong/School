@@ -1,0 +1,10 @@
+const express = require("express");
+const cors = require("cors");
+const app = express();
+const api = require("./routes/login.route");
+const bodyParser = require("body-parser");
+app.listen(process.env.PORT || 3000);
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(cors({ origin: "*" }));
+app.use("/api", api);

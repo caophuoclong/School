@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <div class="change-lang">
+      <p id="vn" class="lang vn-lang selected">VN</p>
+      <p id="en" class="lang en-lang">EN</p>
+    </div>
+    <div class="login-form">
+      <p><b>Đăng nhập</b></p>
+      <p>Bạn đã có tài khoản chưa? <a href="registration.html">Đăng ký</a></p>
+      <form id="form-login">
+        <ul style="text-align: center">
+          <li id="lst-username" class="lst">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              class="text"
+              placeholder="Tên tài khoản"
+            />
+          </li>
+          <li id="lst-password" class="lst">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="text"
+              placeholder="Mật khẩu"
+            />
+          </li>
+          <li>
+            <input
+              style="cursor: pointer"
+              type="checkbox"
+              name="checkbox"
+              id="checkbox"
+            />
+            <label for="checkbox">Lưu mật khẩu</label>
+          </li>
+          <li>
+            <input class="btn" id="btn-submit" type="submit" value="Gửi" />
+            <a href="/"
+              ><input class="btn" id="btn-exit" type="button" value="Hủy"
+            /></a>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="login.js"></script>
+  </body>
+</html>
