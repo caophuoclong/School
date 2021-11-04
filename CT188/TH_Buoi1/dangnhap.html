@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="shortcut icon"
+      type="image/vnd.microsoft.icon"
+      href="./images/favicon.ico"
+    />
+    <style>
+      tr,
+      td {
+        font-weight: bold;
+      }
+      legend {
+        font-weight: bold;
+        font-size: 18px;
+      }
+      fieldset {
+        width: 40%;
+        margin-bottom: 20px;
+      }
+      #mrg1 {
+        margin-left: 95px;
+      }
+      input[type="submit"] {
+        margin-left: 134px;
+      }
+    </style>
+    <title>Đăng Nhập</title>
+  </head>
+  <body>
+    <header>
+      <a id="#top" href="trangchu.html"
+        ><img src="./images/logo.png" alt=""
+      /></a>
+      <img id="header-img1" src="./images/header-img1.png" alt="" />
+      <img id="header-img2" src="./images/header-img2.png" alt="" />
+      <img id="header-img3" src="./images/header-img3.png" alt="" />
+      <nav>
+        <a href="trangchu.html">Trang Chủ</a>
+        <a href="gioithieu.html">Giới Thiệu</a>
+        <a href="sanpham.html">Sản Phẩm</a>
+        <a href="tintuc.html">Tin Tức</a>
+        <a href="dangnhap.html">Đăng Nhập</a>
+        <a href="dangky.html">Đăng ký</a>
+        <a href="lienhe.html">Liên Hệ</a>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <h1>ĐĂNG NHẬP</h1>
+        <form
+          action="#"
+          method="post"
+          enctype="application/x-www-form-urlencoded"
+          class="signin-form"
+        >
+          <table>
+            <tr>
+              <td colspan="2">
+                <img
+                  src="./images/dangnhap/userlogin.png"
+                  alt=""
+                  width="200"
+                  height="200"
+                  id="mrg1"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fas fa-envelope icon-white"></i>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  placeholder="Nhập email"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <i class="fas fa-key icon-white"></i>
+                <input
+                  type="password"
+                  name="pass"
+                  id="pass"
+                  placeholder="Nhập mật khẩu"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <input type="submit" value="Đăng nhập" />
+                <input type="reset" value="Huỷ" />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <label for="remember">
+                  Bạn quên <a href="">Mật khẩu?</a>
+                  <input type="checkbox" name="remember" checked="checked" />
+                  Ghi nhớ cho lần đăng nhập sau
+                </label>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </article>
+    </main>
+    <footer>
+      <span>&copy 2021 Bản quyền thuộc về Nguyenthiman.</span>
+      <a href="#">
+        <i class="fab fa-facebook-f fb"></i>
+      </a>
+      <a href="#">
+        <i class="fab fa-twitter twitter"></i>
+      </a>
+      <a href="#">
+        <i class="fab fa-pinterest pinterest"></i>
+      </a>
+      <a href="#top">
+        <img class="return" src="./images/top.png" alt="" />
+      </a>
+    </footer>
+  </body>
+</html>
