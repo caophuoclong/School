@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liên Hệ</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a href="/trangchu.html"
+        ><img id="logo" src="./images/logo.png" alt="Day la logo"
+      /></a>
+    </header>
+    <nav>
+      <a href="trangchu.html">Trang Chủ</a>
+      <a href="gioithieu.html">Giới Thiệu</a>
+      <a href="sanpham.html">Sản Phẩm</a>
+      <a href="tintuc.html">Tin Tức</a>
+      <a href="dangnhap.html">Đăng Nhập</a>
+      <a href="dangky.html">Đăng Ký</a>
+      <a href="lienhe.html">Liên Hệ</a>
+    </nav>
+    <main>
+      <h1>Liên Hệ</h1>
+      <img src="./images/lienhe/check-in.png" alt="" />
+      <h1>Địa chỉ: 0123, Tòa Nhà ABC, TP. Cần Thơ</h1>
+      <p>
+        Nếu bạn có góp ý, vui lòng liên hệ bằng thư điện tử hoặc sử dụng biểu
+        mẫu bên dưới. Xin cảm ơn
+      </p>
+      <fieldset>
+        <legend>Liên hệ</legend>
+        <table
+          action="#"
+          method="POST"
+          enctype="application/x-www-form-urlencoded"
+        >
+          <tr>
+            <td>
+              <label for="fname">Họ tên</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                placeholder="Vui lòng nhập họ tên"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="email">Email</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Vui lòng nhập email"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="subject">Chủ đề</label>
+            </td>
+            <td>
+              <select name="subject" id="subject">
+                <option value="1">Về sản phẩm dịch vụ</option>
+                <option value="2">Về ưu đãi thành viên</option>
+                <option value="3">Vị trí tuyển dụng</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="content">Nội dung</label>
+            </td>
+            <td>
+              <textarea
+                name="content"
+                id="content"
+                cols="50"
+                rows="7"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Gửi" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </main>
+    <footer>
+      <p>
+        &copy; 2021 Bản quyền thuộc về Trần Cao Phước Long,
+        <a href="https://facebook.com">facebook</a>,
+        <a href="https://twitter.com">twitter</a>,
+        <a href="https://pinterest.com">pinterest</a>
+      </p>
+      <a href="#logo">Về Đầu Trang</a>
+    </footer>
+  </body>
+</html>

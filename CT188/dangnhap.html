@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Nhập</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a href="/trangchu.html"
+        ><img id="logo" src="./images/logo.png" alt="Day la logo"
+      /></a>
+    </header>
+    <nav>
+      <a href="trangchu.html">Trang Chủ</a>
+      <a href="gioithieu.html">Giới Thiệu</a>
+      <a href="sanpham.html">Sản Phẩm</a>
+      <a href="tintuc.html">Tin Tức</a>
+      <a href="dangnhap.html">Đăng Nhập</a>
+      <a href="dangky.html">Đăng Ký</a>
+      <a href="lienhe.html">Liên Hệ</a>
+    </nav>
+    <main>
+      <fieldset>
+        <legend>ĐĂNG NHẬP</legend>
+        <table
+          action="#"
+          method="POST"
+          enctype="application/x-www-form-urlencoded"
+        >
+          <img src="./images/dangnhap/userlogin.png" alt="" />
+          <tr>
+            <td>
+              <label for="email">Email</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="Vui lòng nhập email"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="password">Mật khẩu</label>
+            </td>
+            <td>
+              <input
+                type="passowrd"
+                id="password"
+                name="password"
+                placeholder="Vui lòng nhập mật khẩu"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" value="Đăng nhập" />
+              <input type="button" value="Hủy" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              Bạn quên <a href="#">Mật khẩu</a>
+              <input type="checkbox" name="rememberMe" id="rememberMe" />
+              <label for="rememberMe">Ghi nhớ cho lần đăng nhập sau</label>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </main>
+    <footer>
+      <p>
+        &copy; 2021 Bản quyền thuộc về Trần Cao Phước Long,
+        <a href="https://facebook.com">facebook</a>,
+        <a href="https://twitter.com">twitter</a>,
+        <a href="https://pinterest.com">pinterest</a>
+      </p>
+      <a href="#logo">Về Đầu Trang</a>
+    </footer>
+  </body>
+</html>

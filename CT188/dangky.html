@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Ký</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a href="/trangchu.html"
+        ><img id="logo" src="./images/logo.png" alt="Day la logo"
+      /></a>
+    </header>
+    <nav>
+      <a href="trangchu.html">Trang Chủ</a>
+      <a href="gioithieu.html">Giới Thiệu</a>
+      <a href="sanpham.html">Sản Phẩm</a>
+      <a href="tintuc.html">Tin Tức</a>
+      <a href="dangnhap.html">Đăng Nhập</a>
+      <a href="dangky.html">Đăng Ký</a>
+      <a href="lienhe.html">Liên Hệ</a>
+    </nav>
+    <main>
+      <fieldset>
+        <legend>ĐĂNG KÝ</legend>
+        <table action="#" method="POST" enctype="multipart/form-data">
+          <tr>
+            <td>
+              <label for="email">Email</label>
+            </td>
+            <td>
+              <input
+                type="text"
+                placeholder="Vui lòng nhập Email"
+                id="email"
+                name="email"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="password">Mật khẩu</label>
+            </td>
+            <td>
+              <input
+                type="password"
+                id="passowrd"
+                name="passowrd"
+                placehoder="Vui lòng nhập mật khẩu"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="passwordConfirm">Nhập lại mật khẩu</label>
+            </td>
+            <td>
+              <input
+                type="password"
+                id="passwordConfirm"
+                name="passwordConfirm"
+                placehoder="Vui lòng nhập mật khẩu"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="member">Cấp độ thành viên</label>
+            </td>
+            <td>
+              <input
+                type="radio"
+                name="member"
+                value="1"
+                id="member1"
+                checked="checked"
+              />
+              <label for="member1">Bạc</label>
+              <input type="radio" name="member" value="2" id="member2" />
+              <label for="member2">Vàng</label>
+              <input type="radio" name="member" value="3" id="member3" />
+              <label for="member3">Bạch Kim</label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="avatar">Chọn ảnh đại diện</label>
+            </td>
+            <td>
+              <input
+                type="file"
+                id="avatar"
+                name="avatar"
+                accept="image/png, image/gif, image/jpeg"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              Thông qua việc tạo tài khoản, bạn đồng ý với
+              <a href="#">Điều khoản & Quyền riêng tư của chúng tôi</a>.
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="button" value="Hủy" />
+              <input type="submit" value="Đăng ký" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </main>
+    <footer>
+      <p>
+        &copy; 2021 Bản quyền thuộc về Trần Cao Phước Long,
+        <a href="https://facebook.com">facebook</a>,
+        <a href="https://twitter.com">twitter</a>,
+        <a href="https://pinterest.com">pinterest</a>
+      </p>
+      <a href="#logo">Về Đầu Trang</a>
+    </footer>
+  </body>
+</html>
