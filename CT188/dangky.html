@@ -5,30 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Đăng Ký</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./gioithieu.css" />
   </head>
   <body>
     <header>
       <a href="/trangchu.html"
         ><img id="logo" src="./images/logo.png" alt="Day la logo"
       /></a>
+      <img src="./images/header-img1.png" alt="" id="header-img1" />
+      <img src="./images/header-img2.png" alt="" id="header-img2" />
+      <img src="./images/header-img3.png" alt="" id="header-img3" />
+      <nav>
+        <a href="trangchu.html">Trang Chủ</a>
+        <a href="gioithieu.html">Giới Thiệu</a>
+        <a href="sanpham.html">Sản Phẩm</a>
+        <a href="tintuc.html">Tin Tức</a>
+        <a href="dangnhap.html">Đăng Nhập</a>
+        <a href="dangky.html">Đăng Ký</a>
+        <a href="lienhe.html">Liên Hệ</a>
+        <div class="search-container">
+          <form action="#" method="get">
+            <div class="input-container">
+              <input
+                type="text"
+                name="search"
+                id="search"
+                class="search"
+                placeholder="Nhập nội dung cần tìm..."
+              />
+              <i class="fas fa-search icon-white"></i>
+              <i class="fas fa-shopping-cart icon-pink"></i>
+            </div>
+          </form>
+        </div>
+      </nav>
     </header>
-    <nav>
-      <a href="trangchu.html">Trang Chủ</a>
-      <a href="gioithieu.html">Giới Thiệu</a>
-      <a href="sanpham.html">Sản Phẩm</a>
-      <a href="tintuc.html">Tin Tức</a>
-      <a href="dangnhap.html">Đăng Nhập</a>
-      <a href="dangky.html">Đăng Ký</a>
-      <a href="lienhe.html">Liên Hệ</a>
-    </nav>
     <main>
-      <fieldset>
-        <legend>ĐĂNG KÝ</legend>
-        <table action="#" method="POST" enctype="multipart/form-data">
+      <form action="#" method="POST" enctype="multipart/form-data">
+        <h1>Đăng ký</h1>
+        <table>
           <tr>
             <td>
-              <label for="email">Email</label>
+              <label for="email"><i class="fas fa-envelope"></i></label>
             </td>
             <td>
               <input
@@ -41,7 +69,7 @@
           </tr>
           <tr>
             <td>
-              <label for="password">Mật khẩu</label>
+              <label for="password"><i class="fas fa-key"></i></label>
             </td>
             <td>
               <input
@@ -54,7 +82,7 @@
           </tr>
           <tr>
             <td>
-              <label for="passwordConfirm">Nhập lại mật khẩu</label>
+              <label for="passwordConfirm"><i class="fas fa-key"></i></label>
             </td>
             <td>
               <input
@@ -67,7 +95,9 @@
           </tr>
           <tr>
             <td>
-              <label for="member">Cấp độ thành viên</label>
+              <label for="member"
+                ><i class="fas fa-users" ></i
+              ></label>
             </td>
             <td>
               <input
@@ -77,16 +107,28 @@
                 id="member1"
                 checked="checked"
               />
-              <label for="member1">Bạc</label>
+              <label
+                for="member1"
+                style="background-color: transparent; color: black;"
+                >Bạc</label
+              >
               <input type="radio" name="member" value="2" id="member2" />
-              <label for="member2">Vàng</label>
+              <label
+                for="member2"
+                style="background-color: transparent; color: black;"
+                >Vàng</label
+              >
               <input type="radio" name="member" value="3" id="member3" />
-              <label for="member3">Bạch Kim</label>
+              <label
+                for="member3"
+                style="background-color: transparent; color: black;"
+                >Bạch Kim</label
+              >
             </td>
           </tr>
           <tr>
             <td>
-              <label for="avatar">Chọn ảnh đại diện</label>
+              <label for="avatar"><i class="fas fa-id-badge"></i></label>
             </td>
             <td>
               <input
@@ -105,21 +147,29 @@
           </tr>
           <tr>
             <td colspan="2">
-              <input type="button" value="Hủy" />
               <input type="submit" value="Đăng ký" />
+              <input type="button" value="Hủy" />
             </td>
           </tr>
         </table>
-      </fieldset>
+      </form>
     </main>
     <footer>
       <p>
         &copy; 2021 Bản quyền thuộc về Trần Cao Phước Long,
-        <a href="https://facebook.com">facebook</a>,
-        <a href="https://twitter.com">twitter</a>,
-        <a href="https://pinterest.com">pinterest</a>
+        <a href="#">
+          <i class="fab fa-facebook-f fb"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-twitter twitter"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-pinterest pinterest"></i>
+        </a>
       </p>
-      <a href="#logo">Về Đầu Trang</a>
+      <a href="#logo"
+        ><img src="./images/top.png" alt="" width="50px" height="50px"
+      /></a>
     </footer>
   </body>
 </html>
