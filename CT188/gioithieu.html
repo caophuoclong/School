@@ -13,8 +13,25 @@
       referrerpolicy="no-referrer"
     />
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./index.css">
-
+    <link rel="stylesheet" href="./index.css" />
+    <style>
+            main{
+        display: grid;
+        grid-template-areas: "article-cell" "right-cell";
+        grid-template-columns: 3fr 1fr;
+      }
+      article{
+        grid-area: "article-cell";
+        size: 3fr;
+      }
+      aside{
+        grid-area: "right-cell";
+        size: 1fr;
+      }
+      article > section > h1 {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -33,7 +50,7 @@
         <a href="dangky.html">Đăng Ký</a>
         <a href="lienhe.html">Liên Hệ</a>
         <div class="search-container">
-          <form action="#" method="get">
+          <form action="timkiem.html" method="GET" id="myform">
             <div class="input-container">
               <input
                 type="text"
@@ -42,8 +59,12 @@
                 class="search"
                 placeholder="Nhập nội dung cần tìm..."
               />
-              <i class="fas fa-search icon-white"></i>
-              <i class="fas fa-shopping-cart icon-pink"></i>
+              <button id="btnSubmit" class="searchBtn" type="submit">
+                <i class="fas fa-search icon-white"></i>
+              </button>
+              <button class="searchBtn" id="btnCart" type="button">
+                <i class="fas fa-shopping-cart icon-pink"></i>
+              </button>
             </div>
           </form>
         </div>
@@ -115,9 +136,11 @@
       </article>
       <aside>
         <h1>Hãy đăng ký thành viên ngay hôm nay</h1>
-        <p>Thành viên được hưởng nhiều ưu đãi: tham gia khóa học miễn phí, tham gia các cuộc thi, nhận tài liệu các món mới, ...</p>
+        <p>
+          Thành viên được hưởng nhiều ưu đãi: tham gia khóa học miễn phí, tham
+          gia các cuộc thi, nhận tài liệu các món mới, ...
+        </p>
       </aside>
-
     </main>
     <footer>
       <p>
@@ -136,5 +159,6 @@
         ><img src="./images/top.png" alt="" width="50px" height="50px"
       /></a>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>

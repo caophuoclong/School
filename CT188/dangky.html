@@ -34,7 +34,7 @@
         <a href="dangky.html">Đăng Ký</a>
         <a href="lienhe.html">Liên Hệ</a>
         <div class="search-container">
-          <form action="#" method="get">
+          <form action="timkiem.html" method="GET" id="myform">
             <div class="input-container">
               <input
                 type="text"
@@ -43,15 +43,19 @@
                 class="search"
                 placeholder="Nhập nội dung cần tìm..."
               />
-              <i class="fas fa-search icon-white"></i>
-              <i class="fas fa-shopping-cart icon-pink"></i>
+              <button id="btnSubmit" class="searchBtn" type="submit">
+                <i class="fas fa-search icon-white"></i>
+              </button>
+              <button class="searchBtn" id="btnCart" type="button">
+                <i class="fas fa-shopping-cart icon-pink"></i>
+              </button>
             </div>
           </form>
         </div>
       </nav>
     </header>
     <main>
-      <form action="#" method="POST" enctype="multipart/form-data">
+      <form action="#" method="POST" enctype="multipart/form-data" id="signUp">
         <h1>Đăng ký</h1>
         <table>
           <tr>
@@ -74,8 +78,8 @@
             <td>
               <input
                 type="password"
-                id="passowrd"
-                name="passowrd"
+                id="password"
+                name="password"
                 placehoder="Vui lòng nhập mật khẩu"
               />
             </td>
@@ -95,9 +99,7 @@
           </tr>
           <tr>
             <td>
-              <label for="member"
-                ><i class="fas fa-users" ></i
-              ></label>
+              <label for="member"><i class="fas fa-users"></i></label>
             </td>
             <td>
               <input
@@ -171,5 +173,43 @@
         ><img src="./images/top.png" alt="" width="50px" height="50px"
       /></a>
     </footer>
+
+    <script src="./index.js"></script>
+    <script>
+      const regexEmail = (email) => {
+        const emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailReg.test(email);
+      };
+      const regexPassword = (password) => {
+        return password.length > 8;
+      };
+      const regexContent = (content) => {
+        return content.length > 10;
+      };
+      const regexName = (name) => {
+        return neame.length > 4;
+      };
+      const formSignUp = document.getElementById("signUp");
+      formSignUp.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("email");
+        const password = document.getElementById("password");
+        const passwordConfirm = document.getElementById("passwordConfirm");
+        console.log(regexPassword(password.value));
+        if (
+          regexEmail(email.value) &&
+          regexPassword(password.value) &&
+          password.value === passwordConfirm.value
+        ) {
+          formSignUp.submit();
+          alert("Gửi dữ liệu thành công!");
+          location.reload();
+        } else {
+          alert("Dữ liệu không hợp lệ");
+          e.preventDefault();
+          return false;
+        }
+      });
+    </script>
   </body>
 </html>

@@ -13,7 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <header>
@@ -32,7 +32,7 @@
         <a href="dangky.html">Đăng Ký</a>
         <a href="lienhe.html">Liên Hệ</a>
         <div class="search-container">
-          <form action="#" method="get">
+          <form action="timkiem.html" method="GET" id="myform">
             <div class="input-container">
               <input
                 type="text"
@@ -41,8 +41,12 @@
                 class="search"
                 placeholder="Nhập nội dung cần tìm..."
               />
-              <i class="fas fa-search icon-white"></i>
-              <i class="fas fa-shopping-cart icon-pink"></i>
+              <button id="btnSubmit" class="searchBtn" type="submit">
+                <i class="fas fa-search icon-white"></i>
+              </button>
+              <button class="searchBtn" id="btnCart" type="button">
+                <i class="fas fa-shopping-cart icon-pink"></i>
+              </button>
             </div>
           </form>
         </div>
@@ -51,17 +55,24 @@
     <main>
       <h1>Liên Hệ</h1>
       <span>
-        <img src="./images/lienhe/check-in.png" alt="" width="10px" height="10px" />
+        <img
+          src="./images/lienhe/check-in.png"
+          alt=""
+          width="10px"
+          height="10px"
+        />
         <strong>Địa chỉ: 0123, Tòa Nhà ABC, TP. Cần Thơ</strong>
         Nếu bạn có góp ý, vui lòng liên hệ bằng thư điện tử hoặc sử dụng biểu
         mẫu bên dưới. Xin cảm ơn
       </span>
       <h1>Góp ý</h1>
-        <table
-          action="#"
-          method="POST"
-          enctype="application/x-www-form-urlencoded"
-        >
+      <form
+        action="#"
+        method="POST"
+        enctype="application/x-www-form-urlencoded"
+        id="contact"
+      >
+        <table>
           <tr>
             <td>
               <label for="fname"><i class="fas fa-user"></i></label>
@@ -119,6 +130,7 @@
             </td>
           </tr>
         </table>
+      </form>
     </main>
     <footer>
       <p>
@@ -137,5 +149,41 @@
         ><img src="./images/top.png" alt="" width="50px" height="50px"
       /></a>
     </footer>
+    <script src="./index.js"></script>
+    <script>
+      const regexEmail = (email) => {
+        const emailReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailReg.test(email);
+      };
+      const regexPassword = (password) => {
+        return password.length > 8;
+      };
+      const regexContent = (content) => {
+        return content.length > 10;
+      };
+      const regexName = (name) => {
+        return name.length > 4;
+      };
+      const formContact = document.getElementById("contact");
+      formContact.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const email = document.getElementById("email");
+        const name = document.getElementById("fname");
+        const content = document.getElementById("content");
+        if (
+          regexEmail(email.value) &&
+          regexName(name.value) &&
+          regexContent(content.value)
+        ) {
+          formContact.submit();
+          alert("Gửi dữ liệu thành công!");
+          location.reload();
+        } else {
+          alert("Dữ liệu không hợp lệ");
+          e.preventDefault();
+          return false;
+        }
+      });
+    </script>
   </body>
 </html>

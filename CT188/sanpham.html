@@ -32,7 +32,7 @@
         <a href="dangky.html">Đăng Ký</a>
         <a href="lienhe.html">Liên Hệ</a>
         <div class="search-container">
-          <form action="#" method="get">
+          <form action="timkiem.html" method="GET" id="myform">
             <div class="input-container">
               <input
                 type="text"
@@ -41,8 +41,12 @@
                 class="search"
                 placeholder="Nhập nội dung cần tìm..."
               />
-              <i class="fas fa-search icon-white"></i>
-              <i class="fas fa-shopping-cart icon-pink"></i>
+              <button id="btnSubmit" class="searchBtn" type="submit">
+                <i class="fas fa-search icon-white"></i>
+              </button>
+              <button class="searchBtn" id="btnCart" type="button">
+                <i class="fas fa-shopping-cart icon-pink"></i>
+              </button>
             </div>
           </form>
         </div>
@@ -92,9 +96,9 @@
           </div>
         </section>
         <h1>Sản phẩm mới</h1>
-<section>
+        <section>
           <div>
-            <img src="./images/sanpham/blueberry.jpg" alt="" />
+            <img src="./images/sanpham/blackberry.jpg" alt="" />
             <h2>Sữa Chua Vị Mâm Xôi</h2>
             Quả mâm xôi là loại quả ăn họ hoa hồng, có nguồn gốc từ châu u, Bắc
             Á và được trồng ở các vùng ôn đới trên toàn thế giới. Có nhiều loại,
@@ -107,7 +111,7 @@
             </span>
           </div>
           <div>
-            <img src="./images/sanpham/blueberry.jpg" alt="" />
+            <img src="./images/sanpham/strawberry.jpg" alt="" />
             <h2>Sữa Chua Vị Dâu Tây</h2>
             Dâu tây là một loài cây thân thảo có thân ngắn và các chiếc lá mọc
             gần với nhau. Lá có nhiều gai, bề mặt lá có nhiều lông tơ và kích
@@ -121,7 +125,7 @@
             </span>
           </div>
           <div>
-            <img src="./images/sanpham/blackberry.jpg" alt="" />
+            <img src="./images/sanpham/blueberry.jpg" alt="" />
             <h2>Sữa Chua Vị Việt Quất</h2>
             Quả việt quất chứa các dưỡng chất tốt cho sức khỏe như chất xơ,
             kali, folate, vitamin C và vitamin B6 (những chất hỗ trợ rất tốt cho
@@ -171,7 +175,7 @@
             <span>
               Số Lượng:
               <input type="number" max="100" min="0" value="0" />
-              <button>Đặt hàng</button>
+              <button onclick="addCart(`1`)">Đặt hàng</button>
             </span>
           </div>
         </section>
@@ -194,5 +198,10 @@
         ><img src="./images/top.png" alt="" width="50px" height="50px"
       /></a>
     </footer>
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script src="./index.js"></script>
+
+    <script type="module" src="./productList.js"></script>
+    <script type="module" src="./sanpham.js"></script>
   </body>
 </html>

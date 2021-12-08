@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Chủ</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+        table{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        tr, td, th {
+            border: 1px solid black;
+        }
+        main table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+        main table td button {
+            color: #ed4190;
+            background-color: #cddc39;
+            border: none;
+            outline: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+        }
+        main table td button:active{
+            background-color: #a8b62f;
+            color: #a76282;
+
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/trangchu.html"
+        ><img id="logo" src="./images/logo.png" alt="Day la logo"
+      /></a>
+      <img src="./images/header-img1.png" alt="" id="header-img1" />
+      <img src="./images/header-img2.png" alt="" id="header-img2" />
+      <img src="./images/header-img3.png" alt="" id="header-img3" />
+      <nav>
+        <a href="trangchu.html">Trang Chủ</a>
+        <a href="gioithieu.html">Giới Thiệu</a>
+        <a href="sanpham.html">Sản Phẩm</a>
+        <a href="tintuc.html">Tin Tức</a>
+        <a href="dangnhap.html">Đăng Nhập</a>
+        <a href="dangky.html">Đăng Ký</a>
+        <a href="lienhe.html">Liên Hệ</a>
+        <div class="search-container">
+          <form action="timkiem.html" method="GET" id="myform">
+            <div class="input-container">
+              <input
+                type="text"
+                name="search"
+                id="search"
+                class="search"
+                placeholder="Nhập nội dung cần tìm..."
+              />
+              <button id="btnSubmit" class="searchBtn" type="submit">
+                <i class="fas fa-search icon-white"></i>
+              </button>
+              <button class="searchBtn" id="btnCart" type="button">
+                <i class="fas fa-shopping-cart icon-pink"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Chi tiết đơn hàng</h1>
+            <table>
+                    <tr>
+                        <th>Hình sp</th>
+                        <th>Tên sp</th>
+                        <th>Số lượng</th>
+                        <th>Đơn giá</th>
+                        <th>Thành tiền</th>
+                        <th></th>
+                    </tr>
+                <tbody id="tableBd">
+                    
+                </tbody>
+                <tfoot id="tableFoot">
+
+                </tfoot>
+            </table>
+        </article>
+
+    </main>
+    <footer>
+        <p>
+          &copy; 2021 Bản quyền thuộc về Trần Cao Phước Long,
+          <a href="#">
+            <i class="fab fa-facebook-f fb"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-pinterest pinterest"></i>
+          </a>
+        </p>
+        <a href="#logo"
+          ><img src="./images/top.png" alt="" width="50px" height="50px"
+        /></a>
+      </footer>
+      <script src="./index.js"></script>
+      <script src="./jquery-3.6.0.min.js"></script>
+      <script type="module" src="./productList.js"></script>
+      <script type="module" src="./giohang.js"></script>
+</html>

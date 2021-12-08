@@ -74,6 +74,12 @@ header {
     grid-area: nav-cell;
     margin-top: 20px;
   }
+  .searchBtn{
+    border: none;
+    outline: none;
+    padding: 0;
+    
+  }
   nav a {
     float: left;
     margin: 3px;
@@ -246,7 +252,7 @@ a>span{
 }
 /* Trang san pham */
 
-main > section {
+main > article >section {
   display: flex;
   flex-wrap:wrap;
 }
@@ -290,21 +296,4 @@ main table label{
 }
 main table td{
   vertical-align: bottom;
-}
-/* Trang gioi thieu */
-main{
-  display: grid;
-  grid-template-areas: "article-cell" "right-cell";
-  grid-template-columns: 3fr 1fr;
-}
-article{
-  grid-area: "article-cell";
-  size: 3fr;
-}
-aside{
-  grid-area: "right-cell";
-  size: 1fr;
-}
-article > section > h1 {
-  text-align: center;
 }

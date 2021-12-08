@@ -33,7 +33,7 @@
         <a href="dangky.html">Đăng Ký</a>
         <a href="lienhe.html">Liên Hệ</a>
         <div class="search-container">
-          <form action="#" method="get">
+          <form action="timkiem.html" method="GET" id="myform">
             <div class="input-container">
               <input
                 type="text"
@@ -42,8 +42,12 @@
                 class="search"
                 placeholder="Nhập nội dung cần tìm..."
               />
-              <i class="fas fa-search icon-white"></i>
-              <i class="fas fa-shopping-cart icon-pink"></i>
+              <button id="btnSubmit" class="searchBtn" type="submit">
+                <i class="fas fa-search icon-white"></i>
+              </button>
+              <button class="searchBtn" id="btnCart" type="button">
+                <i class="fas fa-shopping-cart icon-pink"></i>
+              </button>
             </div>
           </form>
         </div>
