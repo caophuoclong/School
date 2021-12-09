@@ -15,6 +15,34 @@
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="index.css" />
     <script src="./jquery-3.6.0.min.js"></script>
+    <style>
+      /* headline */
+      #headline {
+        position: relative;
+        margin: 0 auto;
+        padding: 10px;
+        width: 1035px;
+        height: 300px;
+      }
+      #headline div {
+        position: relative;
+        margin: 0 auto;
+      }
+      #headline div img {
+        margin: 0 auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+      #headline div span {
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        padding: 0 5px;
+        border: 1px solid red;
+        border-radius: 3px;
+        background-color: white;
+        z-index: 10;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -55,6 +83,7 @@
     </header>
 
     <main>
+      <div id="headline"></div>
       <article>
         <img src="./images/trangchu/bg-home.jpg" alt="" />
         <h1>Sản phẩm mới</h1>
@@ -184,6 +213,9 @@
         ><img src="./images/top.png" alt="" width="50px" height="50px"
       /></a>
     </footer>
+    <script src="./jquery-3.6.0.min.js"></script>
     <script src="./index.js"></script>
+    <script src="./ads.js"></script>
+    <script src="./headline.js"></script>
   </body>
 </html>
