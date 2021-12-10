@@ -169,3 +169,25 @@ h5 {
 .col-6 > img {
   border: 1px solid white;
 }
+
+td{
+  text-align: right;
+}
+td:first-child{
+  text-align: left;
+}
+td:nth-child(2){
+  text-align: left;
+}
+.far {
+  color: white;
+}
+.width{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 5px;
+
+}
